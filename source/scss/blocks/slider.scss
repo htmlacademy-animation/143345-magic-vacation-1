@@ -13,6 +13,30 @@
   }
 }
 
+.swiper-slide-active {
+  .slider__item-text {
+    opacity: 0;
+
+    animation-name: fadeIn, slideInRight;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+}
+
+.swiper-slide-next {
+  .slider__item-text {
+    opacity: 0;
+
+    animation-name: fadeIn, slideInLeft;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+}
+
 .slider__item {
   display: flex;
   flex-direction: column;
