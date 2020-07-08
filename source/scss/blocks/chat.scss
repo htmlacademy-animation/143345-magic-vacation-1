@@ -185,4 +185,23 @@
 
 .chat__footer {
   margin-top: auto;
+
+  .form__field {
+    display: flex;
+    width: 0;
+
+    animation-name: increaseWidthLeft;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+
+    &::placeholder {
+      color: $c-purple;
+      opacity: 0.7;
+
+      animation-name: fadeIn;
+      animation-duration: 0.4s;
+      //animation-delay: 0.6s;
+      animation-timing-function: ease;
+    }
+  }
 }
