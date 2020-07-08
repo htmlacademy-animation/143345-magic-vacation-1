@@ -1,7 +1,7 @@
 export default () => {
-  const body = document.querySelector('body');
+  const body = document.querySelector(`body`);
 
-  window.addEventListener('load', () => {
-    body.classList.add('page-loaded');
-  })
-}
+  window.addEventListener(`load`, () => {
+    body.classList.add(`page-loaded`);
+  });
+};
