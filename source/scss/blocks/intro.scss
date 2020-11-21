@@ -97,7 +97,7 @@
   opacity: 0;
 
   animation-name: fadeIn, slideInUp;
-  animation-duration: 0.5s;
+  animation-duration: $duration-middle;
   animation-delay: 1s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;

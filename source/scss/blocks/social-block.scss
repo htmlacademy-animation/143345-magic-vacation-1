@@ -38,7 +38,7 @@ $social-block-height: 135px;
     border: 2px solid $c-light;
     z-index: -1;
 
-    transition: width 0.5s cubic-bezier(.5, .74, .2, 1.69), height 0.5s cubic-bezier(.5, .74, .2, 1.69);
+    transition: width $duration-middle cubic-bezier(.5, .74, .2, 1.69), height $duration-middle cubic-bezier(.5, .74, .2, 1.69);
   }
 
   svg {
