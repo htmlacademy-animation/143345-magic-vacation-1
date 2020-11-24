@@ -10494,12 +10494,23 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (() => {
+  const rulesSection = document.querySelector(`.screen--rules`);
   const lastItemRules = document.querySelector(`.rules__item:last-child`);
   const linkRules = document.querySelector(`.rules__link`);
-
-  lastItemRules.addEventListener(`animationend`, () => {
-    linkRules.classList.add(`rules__link--active`);
-  });
+  const handleAnimationEndItemRules = () => linkRules.classList.add(`rules__link--active`);
+  const observerConfig = {attributeFilter: [`class`]};
+  const mutationCallback = (mutations) => {
+    mutations.forEach((mut) => {
+      if (mut.target.classList.contains(`active`)) {
+        lastItemRules.addEventListener(`animationend`, handleAnimationEndItemRules);
+      } else {
+        lastItemRules.removeEventListener(`animationend`, handleAnimationEndItemRules);
+        linkRules.classList.remove(`rules__link--active`);
+      }
+    });
+  };
+  const observer = new MutationObserver(mutationCallback);
+  observer.observe(rulesSection, observerConfig);
 });
 
 
