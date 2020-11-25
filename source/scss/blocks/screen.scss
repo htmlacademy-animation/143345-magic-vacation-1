@@ -47,7 +47,7 @@
   background-color: $c-light;
   z-index: 1;
 
-  transition: bottom 0.5s ease;
+  transition: bottom $duration-middle ease;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;

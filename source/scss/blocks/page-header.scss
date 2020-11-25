@@ -246,7 +246,7 @@
     position: relative;
     display: block;
     color: inherit;
-    transition: color 0.5s ease;
+    transition: color $duration-middle ease;
     padding: 0 0.5em 0.5em;
 
     &::after {
@@ -258,7 +258,7 @@
       background-color: $c-light;
       right: 0;
 
-      transition: width 0.5s ease;
+      transition: width $duration-middle ease;
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;

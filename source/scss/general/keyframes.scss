@@ -42,7 +42,22 @@
   0% {
     flex-grow: 0;
   }
+
   100% {
     flex-grow: 1;
+  }
+}
+
+@keyframes bounce {
+  40% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
